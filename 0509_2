@@ -1,0 +1,139 @@
+root@server:~# tail /etc/shadow
+gnome-initial-setup:*:19411:0:99999:7:::
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+unbuntu:$y$j9T$kiTGPS2.3deoq1LiJTd1k/$PVdnpnyHc6e.lfYBMt7jb7M/ZI8b4uUFkf2l8rW2kV6:19451:0:99999:7:::
+poly1:$y$j9T$f44zZKeGUARsewk6OGFJW.$s4mSrDuS4KK/Tdxvc8Vh.ix3moR8pgUG3g1IazRSQA1:19479:10:30:10::20818:
+poly2:$y$j9T$.5S9YZd6cilAhmUeXsLKR0$iKp2oi9kRkAHT/NnbfNwARNs88756FSO9kGFgYK7Uo3:19479:0:99999:7:::
+poly3:$y$j9T$1cxkQ5TiGesjlXnk4qMIs.$qhraL4/NG33hBARjo5ROC73mnbhezPgAmUMA5dbxmpD:19479:0:99999:7:::
+poly4:$y$j9T$1VvGtP3m3WR1pOo/4nO/71$afp8djTUwnWvDeUoV5zx1Dd3oc8MkbTBzoW08J/Bce3:19479:0:99999:7:::
+hanbit1:$y$j9T$0MmQ/GSlR0MguUlAV/7Jw0$iHPZAmY7dYgqOKoVubv4itok9ugYrlcTRFDPUZqVcw1:19479:0:99999:7:::
+hanbit2:$y$j9T$tlIRkiYnImCF9e1/ICI7X.$OsXwZ89a.n6tb9Cfg35JVT9Oc4U1AluMu8xrk/DTWP6:19479:0:99999:7:::
+root@server:~# chown poly1 mydata.txt
+root@server:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly1 root 0  5월  9 09:26 mydata.txt
+root@server:~# chown poly2.poly2 mydata.txt
+root@server:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 poly2 0  5월  9 09:26 mydata.txt
+root@server:~# chgrp poly3 mydata.txt
+chgrp: 잘못된 그룹: `poly3'
+root@server:~# chgrp root mydata.txt
+root@server:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 root 0  5월  9 09:26 mydata.txt
+root@server:~# nano sample
+root@server:~# nano sample
+root@server:~# cat
+^[[A^Z 
+[1]+  멈춤                  cat
+root@server:~# cat sample
+리눅스 명령 연습중
+파일 허가권과 소유권에 대한 명령 실습중
+ls /var
+root@server:~# ls -l sample
+-rw-r--r-- 1 root root 92  5월  9 10:15 sample
+root@server:~# chown r+x sample
+chown: 부적절한 사용자: `r+x'
+root@server:~# chown u+x sample
+chown: 부적절한 사용자: `u+x'
+root@server:~# chmod u+x sample
+root@server:~# ls -l sample
+-rwxr--r-- 1 root root 92  5월  9 10:15 sample
+root@server:~# sample
+명령어 'sample' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+apt install barcode
+root@server:~# ./sample
+./sample: 줄 1: 리눅스: 명령어를 찾을 수 없음
+./sample: 줄 2: 파일: 명령어를 찾을 수 없음
+backups  crash	local  log   metrics  run   spool
+cache	 lib	lock   mail  opt      snap  tmp
+root@server:~# whoami
+root
+root@server:~# ./sample
+./sample: 줄 1: 리눅스: 명령어를 찾을 수 없음
+./sample: 줄 2: 파일: 명령어를 찾을 수 없음
+backups  crash	local  log   metrics  run   spool
+cache	 lib	lock   mail  opt      snap  tmp
+root@server:~# ls -l sample
+-rwxr--r-- 1 root root 92  5월  9 10:15 sample
+root@server:~# chmod unbuntu.unbuntu sample
+chmod: 부적절한 모드: `unbuntu.unbuntu'
+자세한 정보는 'chmod --help'를 입력하십시오.
+root@server:~# chmod unbuntu sample
+chmod: 부적절한 모드: `unbuntu'
+자세한 정보는 'chmod --help'를 입력하십시오.
+root@server:~# chown unbuntu.unbuntu sample
+root@server:~# ls -l sample
+-rwxr--r-- 1 unbuntu unbuntu 92  5월  9 10:15 sample
+root@server:~# chmod 754 sample
+root@server:~# ls -l sample
+-rwxr-xr-- 1 unbuntu unbuntu 92  5월  9 10:15 sample
+root@server:~# pwd
+/root
+root@server:~# ls -l /root/sample
+-rwxr-xr-- 1 unbuntu unbuntu 92  5월  9 10:15 /root/sample
+root@server:~# su -unbuntu
+Try 'su --help' for more information.
+root@server:~# su - unbuntu
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+unbuntu@server:~$ ls -l /root/sample
+ls: '/root/sample'에 접근할 수 없음: 허가 거부
+unbuntu@server:~$ ls -ld /root
+drwx------ 17 root root 4096  5월  9 10:15 /root
+unbuntu@server:~$ logout
+root@server:~# ls -l /root/sample
+-rwxr-xr-- 1 unbuntu unbuntu 92  5월  9 10:15 /root/sample
+root@server:~# mv sample ~unbuntu
+root@server:~# su - unbuntu
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+unbuntu@server:~$ ls -l sample
+-rwxr-xr-- 1 unbuntu unbuntu 92  5월  9 10:15 sample
+unbuntu@server:~$ logout
+root@server:~# ls -l sample
+ls: 'sample'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@server:~# su -unbuntu
+Try 'su --help' for more information.
+root@server:~# su - unbuntu
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+unbuntu@server:~$ ls -l sample
+-rwxr-xr-- 1 unbuntu unbuntu 92  5월  9 10:15 sample
+unbuntu@server:~$ pwd
+/home/unbuntu
+unbuntu@server:~$ ls -ld /unbuntu
+ls: '/unbuntu'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+unbuntu@server:~$ ls -ld /home/unbuntu
+drwxr-x--- 14 unbuntu unbuntu 4096  5월  9 10:38 /home/unbuntu
+unbuntu@server:~$ chmod 777 sample
+unbuntu@server:~$ ls -ld /home/unbuntu
+drwxr-x--- 14 unbuntu unbuntu 4096  5월  9 10:38 /home/unbuntu
+unbuntu@server:~$ ls -l sample
+-rwxrwxrwx 1 unbuntu unbuntu 92  5월  9 10:15 sample
+unbuntu@server:~$ chown root sample
+chown: 'sample'의 소유권 바꾸는 중: 명령을 허용하지 않음
+unbuntu@server:~$ chown root.root sample
+chown: 'sample'의 소유권 바꾸는 중: 명령을 허용하지 않음
+unbuntu@server:~$ logout
+root@server:~# chown root.root sample
+chown: 'sample'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@server:~# mv sample ~root
+mv: 'sample' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@server:~# su - unbuntu
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+unbuntu@server:~$ mv sample ~root
+mv: '/root/sample' 상태 정보 확인 불가: 허가 거부
+unbuntu@server:~$ exit
+로그아웃
+root@server:~# mkdir linkdir
+root@server:~# nano linkdir
+root@server:~# cd linkdir/
+root@server:~/linkdir# nano originalfile
+root@server:~/linkdir# cat originalfile
+파일링크 실습용 원본파일
+root@server:~/linkdir# 
