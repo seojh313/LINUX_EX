@@ -1,0 +1,46 @@
+root@server:~# touch mydata.txt
+root@server:~# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod 777 mydata.txt
+root@server:~# ls- l mydata.txt
+명령어 'ls-' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  snap lsdlsd의 명령어 ' (0.16.0)'
+  deb lswsuckless-tools의 명령어 ' (46-1)'
+  deb lsmlsm의 명령어 ' (1.0.4-2)'
+  deb lsclivescript의 명령어 ' (1.6.1+dfsg-2)'
+  deb lshlsh-client의 명령어 ' (2.1-13)'
+  deb lscoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+'snap info <snapname>'에서 추가 버전을 확인하십시오.
+root@server:~# ls - l mydata.txt
+ls: '-'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+ls: 'l'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+mydata.txt
+root@server:~# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod 644 mydata.txt
+root@server:~# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod u+x mydata.txt
+root@server:~# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod u-r mydata.txt
+root@server:~# ls -l mydata.txt
+--wxr--r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod u+r mydata.txt
+root@server:~# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod u-w mydata.txt
+root@server:~# ls -l mydata.txt
+-r-xr--r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmod g+w mydata.txt
+root@server:~# ls -l mydata.txt
+-r-xrw-r-- 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# chmd o+x mydata.txt
+명령어 'chmd' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb chmodcoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+Try: apt install <deb name>
+root@server:~# chmod o+x mydata.txt
+root@server:~# ls -l mydata.txt
+-r-xrw-r-x 1 root root 0  5월  9 09:26 mydata.txt
+root@server:~# ^C
+root@server:~# 
