@@ -1,0 +1,16 @@
+root@server:~# yes > /dev/null
+ps -ef|greps yes
+죽었음
+root@server:~# ps -ef|greps yes
+명령어 'greps' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb gropsgroff-base의 명령어 ' (1.22.4-8build1)'
+  deb grepgrep의 명령어 ' (3.7-1build1)'
+Try: apt install <deb name>
+root@server:~# 
+
+
+root@server:~# ps -ef | grep yes
+root        3725    3712 99 11:37 pts/0    00:00:58 yes
+root        3748    3736  0 11:38 pts/1    00:00:00 grep --color=auto yes
+root@server:~# kill -9 3725
+root@server:~# 
