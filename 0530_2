@@ -1,0 +1,60 @@
+root@server:~# cd /etc/apt
+root@server:/etc/apt# nano sources.list
+root@server:/etc/apt# nano sources.list
+root@server:/etc/apt# ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+root@server:/etc/apt# sd
+sd: 명령을 찾을 수 없습니다
+root@server:/etc/apt# cd
+root@server:~# ssg
+명령어 'ssg' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb sglogin의 명령어 ' (1:4.8.1-2ubuntu2.1)'
+  deb sscgsscg의 명령어 ' (3.0.2-1)'
+  deb sshopenssh-client의 명령어 ' (1:8.9p1-3ubuntu0.1)'
+  deb stgstgit의 명령어 ' (0.19-1)'
+  deb ss2python3-pyroute2.core의 명령어 ' (0.6.4-3ubuntu1)'
+  deb ssrsoundscaperenderer-common의 명령어 ' (0.5.0~dfsg-5)'
+  deb sngsng의 명령어 ' (1.1.0-4)'
+  deb ssulibssu-tools의 명령어 ' (0.10.0-3build1)'
+  deb ssiproute2의 명령어 ' (5.15.0-1ubuntu2)'
+Try: apt install <deb name>
+root@server:~# ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+root@server:~# ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.130.130  netmask 255.255.255.0  broadcast 192.168.130.255
+        inet6 fe80::8932:56ad:fb9c:286d  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:3b:b2:4b  txqueuelen 1000  (Ethernet)
+        RX packets 85  bytes 50985 (50.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 91  bytes 10438 (10.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 113  bytes 9553 (9.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 113  bytes 9553 (9.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@server:~# ssh ubuntu@192.168.130.130
+ssh: connect to host 192.168.130.130 port 22: Connection refused
+root@server:~# ssh unbuntu@192.168.130.130
+ssh: connect to host 192.168.130.130 port 22: Connection refused
+root@server:~# ssh ubuntu@192.168.130.130
+ssh: connect to host 192.168.130.130 port 22: Connection refused
+root@server:~# 
